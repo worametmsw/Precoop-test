@@ -51,6 +51,7 @@
             Edit Movie
           </button>
         </div>
+        <NuxtLink to="/"><button class="bg-danger w-full rounded px-2 py-3 mt-6 text-white">LogOut</button></NuxtLink>
       </div>
     </div>
 
@@ -199,22 +200,25 @@ export default {
         this.setThname = ''
         this.setYear = ''
         alert('Success')
+        this.showMovie = false
+        this.showSelect = true
       } else {
         alert('Add Movie Fail')
       }
     },
     Editsave() {
-          if (this.editEng !== '' && this.editTh !== '' && this.editYear) {
-      this.movieName.nameEn = this.editEng
-      this.movieName.nameTh = this.editTh
-      this.movieName.year = this.editYear 
-      this.movieName.label = this.editEng
-      this.editshow = false
-      this.showSelect = true
-        }
-        this.setEnname = ''
-        this.setThname = ''
-        this.setYear = ''
+      if (this.editEng !== '' && this.editTh !== '' && this.editYear) {
+        this.movieName.nameEn = this.editEng
+        this.movieName.nameTh = this.editTh
+        this.movieName.year = this.editYear
+        this.movieName.label = this.editEng
+        this.editshow = false
+        this.showSelect = true
+      }
+      this.setEnname = ''
+      this.setThname = ''
+      this.setYear = ''
+      this.search()
     },
     back() {
       this.showSelect = true
