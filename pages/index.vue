@@ -33,7 +33,7 @@
           <label class="font-semibold text-sm text-gray-600 pb-1 block ">username</label>
           <input v-model="setUsername" type="text" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" placeholder="username" />
           <label class="font-semibold text-sm text-gray-600 pb-1 block">Password</label>
-          <input v-model="setPassword" type="text" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" placeholder="password" />
+          <input v-model="setPassword" type="password" class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" placeholder="password" />
           <button
             @click="summit"
             type="button"
@@ -71,7 +71,7 @@ export default {
       this.$router.push({ path: value })
     },
     login() {
-      if (this.username === this.setUsername && this.password === this.setPassword) {
+      if (this.username === this.setUsername && this.password === this.setPassword && this.username !== '' && this.password !== '') {
         alert('Login Success')
         this.redirect('/admin')
       } else {

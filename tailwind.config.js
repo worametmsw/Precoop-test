@@ -2,20 +2,14 @@ module.exports = {
     purge: ['~/**/*.vue'],
     theme: {
       colors: {
-        transparent: 'transparent',
-        'primary-blue': '#5CE1E6',
-        'secondary-blue': '#4349EB',
-        'third-blue': '#EDF2F7',
-        'lime-green': '#ADFF2F',
         green:'#8CF360',
-        info: '#F8EF13',
         danger: '#EB5757',
         black: '#222f3e',
         gray: '#D8D6D1',
         disabled: '#BDBDBD',
         white: '#ffffff',
         blue: '#879CEC',
-        orange: '#F4A82C'
+        orange: '#FF9933'
       },
       fontSize: {
         '0': '0rem',
